@@ -1,0 +1,301 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Vaso.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Sarten.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Pera.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Platano.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Uva.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Mango.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Manzana.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Background_colorv0.1(atras).jpg" type="Texture" id=10]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=11]
+[ext_resource path="res://FrutasSpawn.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Sonidos/Juego 2.0.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Mordida.wav" type="AudioStream" id=14]
+[ext_resource path="res://Maderos_enfrente.png" type="Texture" id=15]
+[ext_resource path="res://explosion_fruta.tscn" type="PackedScene" id=16]
+[ext_resource path="res://patencio/patencio0002.png" type="Texture" id=17]
+[ext_resource path="res://patencio/patencio0003.png" type="Texture" id=18]
+[ext_resource path="res://patencio/patencio0000.png" type="Texture" id=19]
+[ext_resource path="res://patencio/patencio0001.png" type="Texture" id=20]
+[ext_resource path="res://game_over.png" type="Texture" id=21]
+[ext_resource path="res://You_win.png" type="Texture" id=22]
+[ext_resource path="res://game_overR.gd" type="Script" id=23]
+[ext_resource path="res://winner.gd" type="Script" id=24]
+[ext_resource path="res://press_start/press_start0000.png" type="Texture" id=25]
+[ext_resource path="res://press_start/press_start0002.png" type="Texture" id=26]
+[ext_resource path="res://press_start/press_start0001.png" type="Texture" id=27]
+[ext_resource path="res://botones/touch_buttons/arrow_press.png" type="Texture" id=28]
+[ext_resource path="res://botones/touch_buttons/arrow_stand.png" type="Texture" id=29]
+[ext_resource path="res://botones/touch_buttons/hook_press.png" type="Texture" id=30]
+[ext_resource path="res://botones/touch_buttons/hook_stand.png" type="Texture" id=31]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 440.484, 59.2382 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 17.7374, 256.034 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 470.132, 15.9737 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 462.059, 65.0059 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "animacion",
+"speed": 1.0
+} ]
+
+[sub_resource type="InputEventKey" id=6]
+scancode = 16777221
+
+[sub_resource type="ShortCut" id=7]
+shortcut = SubResource( 6 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 25 ), ExtResource( 27 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "press",
+"speed": 4.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=13]
+
+[sub_resource type="InputEventKey" id=9]
+scancode = 16777221
+
+[sub_resource type="ShortCut" id=10]
+shortcut = SubResource( 9 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 25 ), ExtResource( 27 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "pressW",
+"speed": 4.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=12]
+
+[node name="Main" type="Node" groups=[
+"main",
+]]
+script = ExtResource( 1 )
+pj = ExtResource( 2 )
+vaso = ExtResource( 3 )
+sarten = ExtResource( 4 )
+pera = ExtResource( 5 )
+platano = ExtResource( 6 )
+uva = ExtResource( 7 )
+mango = ExtResource( 8 )
+manzana = ExtResource( 9 )
+explosion_fruta = ExtResource( 16 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 509.659, 382.933 )
+texture = ExtResource( 10 )
+
+[node name="Control" parent="." instance=ExtResource( 11 )]
+margin_left = 4.0
+margin_top = -0.717529
+margin_right = 44.0
+margin_bottom = 39.2825
+
+[node name="PJ_position" type="Position2D" parent="."]
+position = Vector2( 490.27, 544.964 )
+
+[node name="frutas" parent="." instance=ExtResource( 12 )]
+position = Vector2( 0, -1.85062 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="Fondo" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 13 )
+volume_db = -20.0
+
+[node name="Mordida" type="AudioStreamPlayer2D" parent="." groups=[
+"mordida",
+]]
+stream = ExtResource( 14 )
+
+[node name="Inicio_juego" type="Timer" parent="."]
+
+[node name="AreaMovimiento" type="Area2D" parent="."]
+position = Vector2( 527.22, 510.463 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaMovimiento"]
+position = Vector2( -51.4883, 32.3 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 509.659, 382.933 )
+z_index = 2
+texture = ExtResource( 15 )
+
+[node name="paredes" type="Node2D" parent="."]
+position = Vector2( 509.659, 382.933 )
+
+[node name="pared_izq" type="StaticBody2D" parent="paredes"]
+position = Vector2( -562.57, -26.9735 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/pared_izq"]
+position = Vector2( 49.3656, -51.6094 )
+shape = SubResource( 2 )
+
+[node name="pared_der" type="StaticBody2D" parent="paredes"]
+position = Vector2( 361.912, -6.77853 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="paredes/pared_der"]
+position = Vector2( 49.3656, -51.6094 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 462.453, 576.823 )
+shape = SubResource( 3 )
+
+[node name="Aplastador_Frutas" type="Area2D" parent="."]
+position = Vector2( 485.692, 676.569 )
+
+[node name="Collision_Aplastador_frutasShape2D" type="CollisionShape2D" parent="Aplastador_Frutas"]
+position = Vector2( -24.7511, -25.8679 )
+shape = SubResource( 4 )
+
+[node name="Ctrl_niveles" type="Timer" parent="."]
+wait_time = 60.0
+
+[node name="Patencio" type="AnimatedSprite" parent="."]
+position = Vector2( 67.2687, 551.703 )
+z_index = 2
+frames = SubResource( 5 )
+animation = "animacion"
+frame = 11
+playing = true
+
+[node name="game_overR" type="Node2D" parent="."]
+visible = false
+position = Vector2( 506.324, 382.345 )
+script = ExtResource( 23 )
+
+[node name="game_over" type="Sprite" parent="game_overR"]
+position = Vector2( 2.80066, -1.39191 )
+z_index = 3
+texture = ExtResource( 21 )
+
+[node name="g_over" type="Button" parent="game_overR"]
+margin_left = -555.066
+margin_top = -408.623
+margin_right = -543.066
+margin_bottom = -388.623
+shortcut = SubResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="press_start" type="AnimatedSprite" parent="game_overR"]
+position = Vector2( -289.266, 261.717 )
+z_index = 4
+frames = SubResource( 8 )
+animation = "press"
+frame = 2
+playing = true
+
+[node name="continue_over" type="TouchScreenButton" parent="game_overR"]
+position = Vector2( -436.485, 184.132 )
+scale = Vector2( 15, 8 )
+z_index = 3
+shape = SubResource( 13 )
+
+[node name="winner" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 24 )
+
+[node name="you_win" type="Sprite" parent="winner"]
+position = Vector2( 511.324, 383.345 )
+z_index = 3
+texture = ExtResource( 22 )
+
+[node name="win" type="Button" parent="winner"]
+margin_right = 12.0
+margin_bottom = 20.0
+shortcut = SubResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="press_startW" type="AnimatedSprite" parent="winner"]
+position = Vector2( 821.902, 666.316 )
+z_index = 4
+frames = SubResource( 11 )
+animation = "pressW"
+frame = 1
+playing = true
+
+[node name="continue_win" type="TouchScreenButton" parent="winner"]
+position = Vector2( 670.987, 579.898 )
+scale = Vector2( 15, 8 )
+z_index = 3
+shape = SubResource( 12 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TouchCOntrols" type="Node2D" parent="CanvasLayer"]
+
+[node name="izq" type="TouchScreenButton" parent="CanvasLayer/TouchCOntrols"]
+position = Vector2( 20.9325, 563.61 )
+scale = Vector2( 0.7, 0.7 )
+normal = ExtResource( 29 )
+pressed = ExtResource( 28 )
+action = "ui_left"
+visibility_mode = 1
+
+[node name="der" type="TouchScreenButton" parent="CanvasLayer/TouchCOntrols"]
+position = Vector2( 366.592, 729.08 )
+rotation = -3.14159
+scale = Vector2( 0.7, 0.7 )
+normal = ExtResource( 29 )
+pressed = ExtResource( 28 )
+action = "ui_right"
+visibility_mode = 1
+
+[node name="salto" type="TouchScreenButton" parent="CanvasLayer/TouchCOntrols"]
+position = Vector2( 990.084, 569.616 )
+rotation = 1.57079
+scale = Vector2( 0.7, 0.7 )
+normal = ExtResource( 29 )
+pressed = ExtResource( 28 )
+action = "jump"
+visibility_mode = 1
+
+[node name="gancho" type="TouchScreenButton" parent="CanvasLayer/TouchCOntrols"]
+position = Vector2( 852.513, 436.335 )
+scale = Vector2( 0.47325, 0.47325 )
+normal = ExtResource( 31 )
+pressed = ExtResource( 30 )
+action = "attack"
+visibility_mode = 1
+[connection signal="sin_vidas" from="Control" to="." method="juego_terminado"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="area_entered" from="Aplastador_Frutas" to="." method="_on_Aplastador_Frutas_area_entered"]
+[connection signal="pressed" from="game_overR/g_over" to="game_overR" method="_on_g_over_pressed"]
+[connection signal="pressed" from="game_overR/continue_over" to="game_overR" method="_on_continue_over_pressed"]
+[connection signal="pressed" from="winner/win" to="winner" method="_on_win_pressed"]
+[connection signal="pressed" from="winner/continue_win" to="winner" method="_on_continue_win_pressed"]

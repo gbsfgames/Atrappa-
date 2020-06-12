@@ -1,0 +1,275 @@
+[gd_scene load_steps=50 format=2]
+
+[ext_resource path="res://Inicio.gd" type="Script" id=1]
+[ext_resource path="res://Main.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Font.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://Intro_image.jpg" type="Texture" id=4]
+[ext_resource path="res://botones/button_newgame_clicked.png" type="Texture" id=5]
+[ext_resource path="res://botones/button_newgame_selected.png" type="Texture" id=6]
+[ext_resource path="res://botones/button_newgame_stand.png" type="Texture" id=7]
+[ext_resource path="res://botones/button_exit_stand.png" type="Texture" id=8]
+[ext_resource path="res://botones/button_exit_clicked.png" type="Texture" id=9]
+[ext_resource path="res://botones/button_exit_selected.png" type="Texture" id=10]
+[ext_resource path="res://botones/button_credits_clicked.png" type="Texture" id=11]
+[ext_resource path="res://botones/button_credits_selected.png" type="Texture" id=12]
+[ext_resource path="res://botones/button_credits_stand.png" type="Texture" id=13]
+[ext_resource path="res://Creditos.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Sonidos/Seleccion.ogg" type="AudioStream" id=15]
+[ext_resource path="res://Sonidos/Juego.ogg" type="AudioStream" id=16]
+[ext_resource path="res://intructions.png" type="Texture" id=17]
+[ext_resource path="res://press_start/press_start0001.png" type="Texture" id=18]
+[ext_resource path="res://press_start/press_start0002.png" type="Texture" id=19]
+[ext_resource path="res://press_start/press_start0000.png" type="Texture" id=20]
+[ext_resource path="res://botones/button_back/boton_back.png" type="Texture" id=21]
+[ext_resource path="res://botones/button_back/button_back_clicked.png" type="Texture" id=22]
+[ext_resource path="res://botones/button_back/button_back_selected.png" type="Texture" id=23]
+[ext_resource path="res://vaso(px)(col)(a).png" type="Texture" id=24]
+[ext_resource path="res://mango(px)(col)(a).png" type="Texture" id=25]
+[ext_resource path="res://manzana(px)(col)(a).png" type="Texture" id=26]
+[ext_resource path="res://platano(px)(color)(a) (1).png" type="Texture" id=27]
+[ext_resource path="res://uva(px)(col)(a).png" type="Texture" id=28]
+[ext_resource path="res://pera(px)(col)(a).png" type="Texture" id=29]
+[ext_resource path="res://sarten(px)(col)(a).png" type="Texture" id=30]
+[ext_resource path="res://good_bad.png" type="Texture" id=31]
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 229, 69 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 224, 63 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 229, 69 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 35
+use_mipmaps = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 224, 65 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 9 )
+region_rect = Rect2( 0, 0, 225, 62 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 224, 65 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 35
+use_mipmaps = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 12 )
+region_rect = Rect2( 0, 0, 227, 65 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+texture = ExtResource( 11 )
+region_rect = Rect2( 0, 0, 224, 64 )
+
+[sub_resource type="StyleBoxTexture" id=11]
+texture = ExtResource( 13 )
+region_rect = Rect2( 0, 0, 227, 65 )
+
+[sub_resource type="InputEventKey" id=12]
+scancode = 16777221
+
+[sub_resource type="ShortCut" id=13]
+shortcut = SubResource( 12 )
+
+[sub_resource type="RectangleShape2D" id=18]
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ ExtResource( 20 ), ExtResource( 18 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "parpadeo",
+"speed": 4.0
+} ]
+
+[sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 23 )
+region_rect = Rect2( 0, 0, 224, 64 )
+
+[sub_resource type="StyleBoxTexture" id=16]
+texture = ExtResource( 22 )
+region_rect = Rect2( 0, 0, 224, 64 )
+
+[sub_resource type="StyleBoxTexture" id=17]
+texture = ExtResource( 21 )
+region_rect = Rect2( 0, 0, 224, 64 )
+
+[node name="Inicio" type="Control" groups=[
+"Inicio",
+]]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+ngame = ExtResource( 2 )
+ditos = ExtResource( 14 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = -10.6434
+margin_top = -10.0701
+margin_right = 1021.36
+margin_bottom = 771.93
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="Sprite" parent="Panel"]
+position = Vector2( 523.054, 394.289 )
+texture = ExtResource( 4 )
+
+[node name="Nuevo_Juego" type="Button" parent="Panel"]
+margin_left = 153.737
+margin_top = 589.065
+margin_right = 403.737
+margin_bottom = 639.065
+hint_tooltip = "Inicia el juego..."
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Salir" type="Button" parent="Panel"]
+margin_left = 702.825
+margin_top = 588.471
+margin_right = 952.825
+margin_bottom = 638.471
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Credits" type="Button" parent="Panel"]
+margin_left = 427.936
+margin_top = 589.072
+margin_right = 677.936
+margin_bottom = 639.072
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="seleccion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+
+[node name="fondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = -25.0
+
+[node name="Instrucciones" type="Node2D" parent="."]
+visible = false
+position = Vector2( 510.92, 384.658 )
+
+[node name="Fondo" type="Sprite" parent="Instrucciones"]
+position = Vector2( -1.05264, 0 )
+texture = ExtResource( 17 )
+
+[node name="continuar" type="Button" parent="Instrucciones"]
+margin_left = -543.22
+margin_top = -402.276
+margin_right = -531.22
+margin_bottom = -382.276
+shortcut = SubResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="continuar_touch" type="TouchScreenButton" parent="Instrucciones"]
+position = Vector2( 180.909, 200.045 )
+scale = Vector2( 15, 5 )
+z_index = 5
+shape = SubResource( 18 )
+visibility_mode = 1
+
+[node name="press_start" type="AnimatedSprite" parent="Instrucciones"]
+position = Vector2( 322.996, 255.46 )
+frames = SubResource( 14 )
+animation = "parpadeo"
+playing = true
+
+[node name="back_to_inicio" type="Button" parent="Instrucciones"]
+margin_left = -449.258
+margin_top = -293.632
+margin_right = -299.258
+margin_bottom = -243.632
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="good_bad" type="Sprite" parent="Instrucciones"]
+position = Vector2( -366.182, 79.5359 )
+texture = ExtResource( 31 )
+
+[node name="Bad" type="Node2D" parent="Instrucciones"]
+position = Vector2( -400.579, 214.753 )
+
+[node name="vaso(px)(col)(a)" type="Sprite" parent="Instrucciones/Bad"]
+position = Vector2( 4.21052, 4.21052 )
+scale = Vector2( 1.2807, 1.2807 )
+texture = ExtResource( 24 )
+
+[node name="sarten(px)(col)(a)" type="Sprite" parent="Instrucciones/Bad"]
+position = Vector2( 50.6932, 5.80654 )
+scale = Vector2( 1.59024, 1.59024 )
+texture = ExtResource( 30 )
+
+[node name="Fruits" type="Node2D" parent="Instrucciones"]
+position = Vector2( 31.1682, -35.0643 )
+
+[node name="uva(px)(col)(a)" type="Sprite" parent="Instrucciones/Fruits"]
+position = Vector2( -360.284, 10.216 )
+scale = Vector2( 0.820809, 0.820809 )
+texture = ExtResource( 28 )
+
+[node name="platano(px)(color)(a) (1)" type="Sprite" parent="Instrucciones/Fruits"]
+position = Vector2( -406.576, 9.2543 )
+scale = Vector2( 0.836755, 0.836755 )
+texture = ExtResource( 27 )
+
+[node name="pera(px)(col)(a)" type="Sprite" parent="Instrucciones/Fruits"]
+position = Vector2( -450.957, 9.18109 )
+scale = Vector2( 1.51014, 1.51014 )
+texture = ExtResource( 29 )
+
+[node name="manzana(px)(col)(a)" type="Sprite" parent="Instrucciones/Fruits"]
+position = Vector2( -385.289, 61.447 )
+scale = Vector2( 0.705264, 0.705264 )
+texture = ExtResource( 26 )
+
+[node name="mango(px)(col)(a)" type="Sprite" parent="Instrucciones/Fruits"]
+position = Vector2( -431.447, 62.0259 )
+scale = Vector2( 1.35088, 1.35088 )
+texture = ExtResource( 25 )
+[connection signal="pressed" from="Panel/Nuevo_Juego" to="." method="_on_Nuevo_Juego_pressed"]
+[connection signal="pressed" from="Panel/Salir" to="." method="_on_Salir_pressed"]
+[connection signal="pressed" from="Panel/Credits" to="." method="_on_Credits_pressed"]
+[connection signal="pressed" from="Instrucciones/continuar" to="." method="_on_continuar_pressed"]
+[connection signal="pressed" from="Instrucciones/continuar_touch" to="." method="_on_continuar_touch_pressed"]
+[connection signal="pressed" from="Instrucciones/back_to_inicio" to="." method="_on_back_to_inicio_pressed"]

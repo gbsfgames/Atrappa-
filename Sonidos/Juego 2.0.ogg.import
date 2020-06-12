@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Juego 2.0.ogg-e5d614ddaf85ccb0c9f0e5bbe923cd8a.oggstr"
+
+[deps]
+
+source_file="res://Sonidos/Juego 2.0.ogg"
+dest_files=[ "res://.import/Juego 2.0.ogg-e5d614ddaf85ccb0c9f0e5bbe923cd8a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

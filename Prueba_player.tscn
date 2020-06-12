@@ -1,0 +1,79 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://coraje_spritev0.1(pixelart)(Color)(Alfa) RIGHT.png" type="Texture" id=2]
+[ext_resource path="res://coraje_spritev0.1(pixelart)(Color)(Alfa).png" type="Texture" id=3]
+[ext_resource path="res://pj04.png" type="Texture" id=4]
+[ext_resource path="res://pj06.png" type="Texture" id=5]
+[ext_resource path="res://pj08.png" type="Texture" id=6]
+[ext_resource path="res://pj02.png" type="Texture" id=7]
+[ext_resource path="res://pj03.png" type="Texture" id=8]
+[ext_resource path="res://pj05.png" type="Texture" id=9]
+[ext_resource path="res://pj07.png" type="Texture" id=10]
+[ext_resource path="res://pj01.png" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 278.145, 36.6 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "up",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 9 ), ExtResource( 5 ), ExtResource( 10 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "Walk",
+"speed": 8.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 21.5687
+height = 80.5215
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 458.204, 622.253 )
+shape = SubResource( 1 )
+
+[node name="KinematicBody2D" type="Area2D" parent="." groups=[
+"player",
+]]
+position = Vector2( 444.627, 536.778 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="KinematicBody2D"]
+visible = false
+position = Vector2( 67.1294, 0 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 2 )
+animation = "up"
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KinematicBody2D"]
+position = Vector2( 6.98341, -31.644 )
+scale = Vector2( 0.378741, 0.378741 )
+frames = SubResource( 3 )
+animation = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 6.34621, -27.1065 )
+shape = SubResource( 4 )
+[connection signal="area_entered" from="KinematicBody2D" to="KinematicBody2D" method="_on_KinematicBody2D_area_entered"]
+[connection signal="area_exited" from="KinematicBody2D" to="KinematicBody2D" method="_on_KinematicBody2D_area_exited"]

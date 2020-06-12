@@ -1,0 +1,12 @@
+
+# Idea: Agregar una vida al completar 50 puntos. (listo)
+
+# Idea: lograr que cada 50 puntos se obtenga una vida nuevamente.
+	variable puntos_reales (numero indefinido)
+	variable puntos_relativos (esta varia entre 1 y 50)
+	El contador de ambas variables inicia en 0.
+	el contador de puntos reales al llegar a 50 se reinicia y manda una señal 
+	se aumenta una vida.
+
+#IDEA: Implementar niveles(Cambio en la frecuencia de salida y rapidez)
+

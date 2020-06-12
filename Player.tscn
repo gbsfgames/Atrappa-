@@ -1,0 +1,429 @@
+[gd_scene load_steps=198 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://coraje_spritev0.1(pixelart)(Color)(Alfa) RIGHT.png" type="Texture" id=2]
+[ext_resource path="res://coraje_spritev0.1(pixelart)(Color)(Alfa).png" type="Texture" id=3]
+[ext_resource path="res://sombra.png" type="Texture" id=6]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0001.png" type="Texture" id=13]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0010.png" type="Texture" id=14]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0008.png" type="Texture" id=15]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0011.png" type="Texture" id=16]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0004.png" type="Texture" id=17]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0013.png" type="Texture" id=18]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0007.png" type="Texture" id=19]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0012.png" type="Texture" id=20]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0003.png" type="Texture" id=21]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0005.png" type="Texture" id=22]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0014.png" type="Texture" id=23]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0015.png" type="Texture" id=24]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0000.png" type="Texture" id=25]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0016.png" type="Texture" id=26]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0017.png" type="Texture" id=27]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0020.png" type="Texture" id=28]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0018.png" type="Texture" id=29]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0002.png" type="Texture" id=30]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0009.png" type="Texture" id=31]
+[ext_resource path="res://animacion_caminar/cuerpo/frame_3_cuerpo.png" type="Texture" id=32]
+[ext_resource path="res://animacion_caminar/cuerpo/frame_7_cuerpo.png" type="Texture" id=33]
+[ext_resource path="res://animacion_caminar/cuerpo/frame_8_cuerpo.png" type="Texture" id=34]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0006.png" type="Texture" id=35]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0020.png" type="Texture" id=36]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_der_frame5.png" type="Texture" id=37]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_der_frame7.png" type="Texture" id=38]
+[ext_resource path="res://animacion_caminar/cuerpo/frame_4_cuerpo.png" type="Texture" id=39]
+[ext_resource path="res://Animation_player_salto/cuerpo1/Salto_cuerpo0019.png" type="Texture" id=40]
+[ext_resource path="res://animacion_caminar/cuerpo/frame_2_cuerpo.png" type="Texture" id=41]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_izq_frame6.png" type="Texture" id=42]
+[ext_resource path="res://animacion_caminar/cuerpo/frame_5_cuerpo.png" type="Texture" id=43]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_der_frame1.png" type="Texture" id=44]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_izq_frame4.png" type="Texture" id=45]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_izq_frame2.png" type="Texture" id=46]
+[ext_resource path="res://animacion_caminar/cuerpo/frame_6_cuerpo.png" type="Texture" id=47]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_izq_frame8.png" type="Texture" id=48]
+[ext_resource path="res://animacion_caminar/cuerpo/frame_1_cuerpo.png" type="Texture" id=49]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_der_frame2.png" type="Texture" id=50]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_der_frame6.png" type="Texture" id=51]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_der_frame8.png" type="Texture" id=52]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_der_frame3.png" type="Texture" id=53]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_izq_frame5.png" type="Texture" id=54]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_izq_frame7.png" type="Texture" id=55]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_izq_frame3.png" type="Texture" id=56]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_der_frame4.png" type="Texture" id=57]
+[ext_resource path="res://animacion_caminar/brazos/caminar_brazo_izq_frame1.png" type="Texture" id=58]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0002.png" type="Texture" id=59]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0003.png" type="Texture" id=60]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0004.png" type="Texture" id=61]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0005.png" type="Texture" id=62]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0000.png" type="Texture" id=63]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0006.png" type="Texture" id=64]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0001.png" type="Texture" id=65]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0012.png" type="Texture" id=66]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0018.png" type="Texture" id=67]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0015.png" type="Texture" id=68]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0013.png" type="Texture" id=69]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0019.png" type="Texture" id=70]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0010.png" type="Texture" id=71]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0014.png" type="Texture" id=72]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0008.png" type="Texture" id=73]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0009.png" type="Texture" id=74]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0007.png" type="Texture" id=75]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0011.png" type="Texture" id=76]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0016.png" type="Texture" id=77]
+[ext_resource path="res://Animation_player_salto/brazo_izq/Salto_brazo_izquierdo0017.png" type="Texture" id=78]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0020.png" type="Texture" id=79]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0011.png" type="Texture" id=80]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0010.png" type="Texture" id=81]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0014.png" type="Texture" id=82]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0003.png" type="Texture" id=83]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0008.png" type="Texture" id=84]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0017.png" type="Texture" id=85]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0006.png" type="Texture" id=86]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0015.png" type="Texture" id=87]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0000.png" type="Texture" id=88]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0005.png" type="Texture" id=89]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0002.png" type="Texture" id=90]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0004.png" type="Texture" id=91]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0012.png" type="Texture" id=92]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0018.png" type="Texture" id=93]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0016.png" type="Texture" id=94]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0001.png" type="Texture" id=95]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0009.png" type="Texture" id=96]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0013.png" type="Texture" id=97]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0019.png" type="Texture" id=98]
+[ext_resource path="res://Animation_player_salto/brazo_der/Salto_brazo_derecho0007.png" type="Texture" id=99]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0011.png" type="Texture" id=100]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0012.png" type="Texture" id=101]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0001.png" type="Texture" id=102]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0000.png" type="Texture" id=103]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0003.png" type="Texture" id=104]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0005.png" type="Texture" id=105]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0007.png" type="Texture" id=106]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0013.png" type="Texture" id=107]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0015.png" type="Texture" id=108]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0014.png" type="Texture" id=109]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0016.png" type="Texture" id=110]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0017.png" type="Texture" id=111]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0008.png" type="Texture" id=112]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0009.png" type="Texture" id=113]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0010.png" type="Texture" id=114]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0002.png" type="Texture" id=115]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0006.png" type="Texture" id=116]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0004.png" type="Texture" id=117]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0018.png" type="Texture" id=118]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0019.png" type="Texture" id=119]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0021.png" type="Texture" id=120]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0023.png" type="Texture" id=121]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0022.png" type="Texture" id=122]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0020.png" type="Texture" id=123]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0026.png" type="Texture" id=124]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0024.png" type="Texture" id=125]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0029.png" type="Texture" id=126]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0025.png" type="Texture" id=127]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0030.png" type="Texture" id=128]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0027.png" type="Texture" id=129]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0029.png" type="Texture" id=130]
+[ext_resource path="res://animacion_ataque/brazo_der/Golpe_brazo_derecho0028.png" type="Texture" id=131]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0002.png" type="Texture" id=132]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0016.png" type="Texture" id=133]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0006.png" type="Texture" id=134]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0000.png" type="Texture" id=135]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0001.png" type="Texture" id=136]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0007.png" type="Texture" id=137]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0014.png" type="Texture" id=138]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0005.png" type="Texture" id=139]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0009.png" type="Texture" id=140]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0008.png" type="Texture" id=141]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0012.png" type="Texture" id=142]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0010.png" type="Texture" id=143]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0004.png" type="Texture" id=144]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0003.png" type="Texture" id=145]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0015.png" type="Texture" id=146]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0017.png" type="Texture" id=147]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0013.png" type="Texture" id=148]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0018.png" type="Texture" id=149]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0019.png" type="Texture" id=150]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0011.png" type="Texture" id=151]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0030.png" type="Texture" id=152]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0026.png" type="Texture" id=153]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0023.png" type="Texture" id=154]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0028.png" type="Texture" id=155]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0027.png" type="Texture" id=156]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0024.png" type="Texture" id=157]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0029.png" type="Texture" id=158]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0030.png" type="Texture" id=159]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0020.png" type="Texture" id=160]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0021.png" type="Texture" id=161]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0022.png" type="Texture" id=162]
+[ext_resource path="res://animacion_ataque/brazo_izq/Golpe_brazo_izquierdo0025.png" type="Texture" id=163]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0009.png" type="Texture" id=164]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0012.png" type="Texture" id=165]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0013.png" type="Texture" id=166]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0003.png" type="Texture" id=167]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0014.png" type="Texture" id=168]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0004.png" type="Texture" id=169]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0001.png" type="Texture" id=170]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0002.png" type="Texture" id=171]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0006.png" type="Texture" id=172]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0005.png" type="Texture" id=173]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0000.png" type="Texture" id=174]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0011.png" type="Texture" id=175]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0007.png" type="Texture" id=176]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0010.png" type="Texture" id=177]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0015.png" type="Texture" id=178]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0008.png" type="Texture" id=179]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0023.png" type="Texture" id=180]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0024.png" type="Texture" id=181]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0020.png" type="Texture" id=182]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0016.png" type="Texture" id=183]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0025.png" type="Texture" id=184]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0027.png" type="Texture" id=185]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0028.png" type="Texture" id=186]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0026.png" type="Texture" id=187]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0018.png" type="Texture" id=188]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0021.png" type="Texture" id=189]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0019.png" type="Texture" id=190]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0022.png" type="Texture" id=191]
+[ext_resource path="res://animacion_ataque/gancho/Gancho0017.png" type="Texture" id=192]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "right",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "up",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 21.5687
+height = 68.2065
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 22.3203
+height = 48.5045
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 135 ), ExtResource( 136 ), ExtResource( 132 ), ExtResource( 145 ), ExtResource( 144 ), ExtResource( 139 ), ExtResource( 134 ), ExtResource( 137 ), ExtResource( 141 ), ExtResource( 140 ), ExtResource( 143 ), ExtResource( 151 ), ExtResource( 142 ), ExtResource( 148 ), ExtResource( 138 ), ExtResource( 146 ), ExtResource( 133 ), ExtResource( 147 ), ExtResource( 149 ), ExtResource( 150 ), ExtResource( 160 ), ExtResource( 161 ), ExtResource( 162 ), ExtResource( 154 ), ExtResource( 157 ), ExtResource( 163 ), ExtResource( 153 ), ExtResource( 156 ), ExtResource( 155 ), ExtResource( 158 ), ExtResource( 159 ) ],
+"loop": false,
+"name": "ataque",
+"speed": 35.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 44 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 63 ), ExtResource( 65 ), ExtResource( 59 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 64 ), ExtResource( 75 ), ExtResource( 73 ), ExtResource( 74 ), ExtResource( 71 ), ExtResource( 76 ), ExtResource( 66 ), ExtResource( 69 ), ExtResource( 72 ), ExtResource( 68 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 67 ), ExtResource( 70 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "Salto_izq",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 58 ), ExtResource( 46 ), ExtResource( 56 ), ExtResource( 45 ), ExtResource( 54 ), ExtResource( 42 ), ExtResource( 55 ), ExtResource( 48 ) ],
+"loop": true,
+"name": "Caminar_izq",
+"speed": 6.0
+} ]
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 49 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ), ExtResource( 41 ), ExtResource( 32 ), ExtResource( 39 ), ExtResource( 43 ), ExtResource( 47 ), ExtResource( 33 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "caminar",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 13 ), ExtResource( 30 ), ExtResource( 21 ), ExtResource( 17 ), ExtResource( 22 ), ExtResource( 35 ), ExtResource( 19 ), ExtResource( 15 ), ExtResource( 31 ), ExtResource( 14 ), ExtResource( 16 ), ExtResource( 20 ), ExtResource( 18 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 29 ), ExtResource( 40 ), ExtResource( 36 ) ],
+"loop": true,
+"name": "salto",
+"speed": 15.0
+} ]
+
+[sub_resource type="SpriteFrames" id=7]
+animations = [ {
+"frames": [ ExtResource( 44 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 44 ), ExtResource( 50 ), ExtResource( 53 ), ExtResource( 57 ), ExtResource( 37 ), ExtResource( 51 ), ExtResource( 38 ), ExtResource( 52 ) ],
+"loop": true,
+"name": "Caminar_der",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 88 ), ExtResource( 95 ), ExtResource( 90 ), ExtResource( 83 ), ExtResource( 91 ), ExtResource( 89 ), ExtResource( 86 ), ExtResource( 99 ), ExtResource( 84 ), ExtResource( 96 ), ExtResource( 81 ), ExtResource( 80 ), ExtResource( 92 ), ExtResource( 97 ), ExtResource( 82 ), ExtResource( 87 ), ExtResource( 94 ), ExtResource( 85 ), ExtResource( 93 ), ExtResource( 98 ), ExtResource( 79 ) ],
+"loop": true,
+"name": "Salto_der",
+"speed": 15.0
+} ]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 103 ), ExtResource( 102 ), ExtResource( 115 ), ExtResource( 104 ), ExtResource( 117 ), ExtResource( 105 ), ExtResource( 116 ), ExtResource( 106 ), ExtResource( 112 ), ExtResource( 113 ), ExtResource( 114 ), ExtResource( 100 ), ExtResource( 101 ), ExtResource( 107 ), ExtResource( 109 ), ExtResource( 108 ), ExtResource( 110 ), ExtResource( 111 ), ExtResource( 118 ), ExtResource( 119 ), ExtResource( 123 ), ExtResource( 120 ), ExtResource( 122 ), ExtResource( 121 ), ExtResource( 125 ), ExtResource( 127 ), ExtResource( 124 ), ExtResource( 129 ), ExtResource( 131 ), ExtResource( 130 ), ExtResource( 128 ) ],
+"loop": true,
+"name": "ataque",
+"speed": 35.0
+} ]
+
+[sub_resource type="SpriteFrames" id=9]
+animations = [ {
+"frames": [ ExtResource( 174 ) ],
+"loop": false,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 174 ), ExtResource( 170 ), ExtResource( 171 ), ExtResource( 167 ), ExtResource( 169 ), ExtResource( 173 ), ExtResource( 172 ), ExtResource( 176 ), ExtResource( 179 ), ExtResource( 164 ), ExtResource( 177 ), ExtResource( 175 ), ExtResource( 165 ), ExtResource( 166 ), ExtResource( 168 ), ExtResource( 178 ), ExtResource( 183 ), ExtResource( 192 ), ExtResource( 188 ), ExtResource( 190 ), ExtResource( 182 ), ExtResource( 189 ), ExtResource( 191 ), ExtResource( 180 ), ExtResource( 181 ), ExtResource( 184 ), ExtResource( 187 ), ExtResource( 185 ), ExtResource( 186 ), ExtResource( 126 ), ExtResource( 152 ) ],
+"loop": true,
+"name": "ataque",
+"speed": 35.0
+} ]
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 13.4133
+
+[sub_resource type="Animation" id=11]
+resource_name = "golpe_colision_derecha"
+length = 3.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = false
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -17.4342, -3.68055 ), Vector2( -17.4342, -3.68055 ), Vector2( 11.181, -43.9754 ), Vector2( 11.181, -43.9754 ), Vector2( 24.9046, -41.9314 ), Vector2( 24.9046, -41.9314 ), Vector2( 54.3957, -24.9959 ), Vector2( 54.3957, -24.9959 ), Vector2( 64.6154, -15.6522 ), Vector2( 64.6154, -15.6522 ), Vector2( 76.0432, -14.9494 ), Vector2( 76.0432, -14.9494 ), Vector2( 101.811, -15.3786 ), Vector2( 101.811, -15.3786 ), Vector2( 101.811, -15.3786 ), Vector2( 101.811, -15.3786 ), Vector2( 101.811, -15.3786 ), Vector2( 101.811, -15.3786 ), Vector2( 101.811, -15.3786 ), Vector2( 101.811, -15.3786 ), Vector2( 101.811, -15.3786 ), Vector2( 76.0432, -14.9494 ), Vector2( 76.0432, -14.9494 ), Vector2( 64.6154, -15.6522 ), Vector2( 64.6154, -15.6522 ), Vector2( 54.3957, -24.9959 ), Vector2( 54.3957, -24.9959 ), Vector2( 24.9046, -41.9314 ), Vector2( 24.9046, -41.9314 ), Vector2( 11.181, -43.9754 ), Vector2( 11.181, -43.9754 ), Vector2( -17.4342, -3.68055 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "golpe_colision_izquierda"
+length = 3.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7, 1.8, 1.9, 2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 21.0193, -3.68056 ), Vector2( 21.0193, -3.68056 ), Vector2( -4.92519, -43.0606 ), Vector2( -4.92519, -43.0606 ), Vector2( -16.5076, -43.0606 ), Vector2( -16.5076, -43.0606 ), Vector2( -47.085, -24.9921 ), Vector2( -47.085, -24.9921 ), Vector2( -56.8142, -15.2629 ), Vector2( -56.8142, -15.2629 ), Vector2( -69.7865, -15.2629 ), Vector2( -93.4145, -16.1895 ), Vector2( -93.4145, -16.1895 ), Vector2( -93.4145, -16.1895 ), Vector2( -93.4145, -16.1895 ), Vector2( -93.4145, -16.1895 ), Vector2( -93.4145, -16.1895 ), Vector2( -93.4145, -16.1895 ), Vector2( -93.4145, -16.1895 ), Vector2( -93.4145, -16.1895 ), Vector2( -69.7865, -15.2629 ), Vector2( -69.7865, -15.2629 ), Vector2( -56.8142, -15.2629 ), Vector2( -56.8142, -15.2629 ), Vector2( -47.085, -24.9921 ), Vector2( -47.085, -24.9921 ), Vector2( -16.5076, -43.0606 ), Vector2( -16.5076, -43.0606 ), Vector2( -4.92519, -43.0606 ), Vector2( -4.92519, -43.0606 ), Vector2( 21.0193, -3.68056 ), Vector2( 21.0193, -3.68056 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "idle"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 4.80399, -1.82738 ) ]
+}
+
+[node name="KinematicBody2D" type="KinematicBody2D" groups=[
+"player",
+]]
+position = Vector2( -17.4342, -3.68055 )
+script = ExtResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 67.1294, 0 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 1 )
+animation = "up"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 3.30332, -24.8948 )
+z_index = 1
+shape = SubResource( 2 )
+
+[node name="colision_futas" type="Area2D" parent="."]
+position = Vector2( -6.98341, 10.4751 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="colision_futas"]
+modulate = Color( 0.533333, 1, 0.0705882, 1 )
+position = Vector2( 10.3175, -36.6646 )
+shape = SubResource( 3 )
+
+[node name="sombra" type="Sprite" parent="."]
+position = Vector2( 12.2103, 35.5085 )
+scale = Vector2( 0.267455, 0.311799 )
+texture = ExtResource( 6 )
+
+[node name="ataque_bra_izq" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 37.657, -26.1268 )
+scale = Vector2( 0.376794, 0.376794 )
+frames = SubResource( 4 )
+animation = "ataque"
+
+[node name="Caminar_brazo_izq" type="AnimatedSprite" parent="."]
+position = Vector2( 1.54044, -30.9972 )
+scale = Vector2( 0.377217, 0.377217 )
+frames = SubResource( 5 )
+animation = "Caminar_izq"
+
+[node name="Cuerpo" type="AnimatedSprite" parent="."]
+position = Vector2( 3.34126, -29.3432 )
+scale = Vector2( 0.332296, 0.332296 )
+frames = SubResource( 6 )
+animation = "caminar"
+
+[node name="Caminar_brazo_der" type="AnimatedSprite" parent="."]
+position = Vector2( 1.54043, -31.4373 )
+scale = Vector2( 0.377217, 0.377217 )
+frames = SubResource( 7 )
+animation = "Caminar_der"
+
+[node name="ataque_bra_der" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 40.6036, -27.2581 )
+scale = Vector2( 0.383733, 0.383733 )
+frames = SubResource( 8 )
+animation = "ataque"
+frame = 10
+
+[node name="gancho" type="AnimatedSprite" parent="."]
+position = Vector2( 41.1814, -24.1921 )
+scale = Vector2( 0.37951, 0.37951 )
+frames = SubResource( 9 )
+animation = "ataque"
+
+[node name="colision_gancho" type="Area2D" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 4.80399, -1.82738 )
+
+[node name="gancho_cols" type="CollisionShape2D" parent="colision_gancho"]
+position = Vector2( -0.281441, 0.181183 )
+shape = SubResource( 10 )
+
+[node name="animacion" type="AnimationPlayer" parent="colision_gancho"]
+playback_speed = 3.5
+anims/golpe_colision_derecha = SubResource( 11 )
+anims/golpe_colision_izquierda = SubResource( 12 )
+anims/idle = SubResource( 13 )
+[connection signal="area_entered" from="colision_futas" to="." method="_on_colision_futas_area_entered"]
+[connection signal="area_exited" from="colision_futas" to="." method="_on_colision_futas_area_exited"]
+[connection signal="animation_finished" from="ataque_bra_izq" to="." method="_on_ataque_bra_izq_animation_finished"]
+[connection signal="animation_finished" from="gancho" to="." method="_on_gancho_animation_finished"]
+[connection signal="area_entered" from="colision_gancho" to="." method="_on_colision_gancho_area_entered"]
