@@ -84,9 +84,9 @@ scancode = 16777221
 [sub_resource type="ShortCut" id=13]
 shortcut = SubResource( 12 )
 
-[sub_resource type="RectangleShape2D" id=18]
+[sub_resource type="RectangleShape2D" id=14]
 
-[sub_resource type="SpriteFrames" id=14]
+[sub_resource type="SpriteFrames" id=15]
 animations = [ {
 "frames": [ ExtResource( 20 ), ExtResource( 18 ), ExtResource( 19 ) ],
 "loop": true,
@@ -94,15 +94,15 @@ animations = [ {
 "speed": 4.0
 } ]
 
-[sub_resource type="StyleBoxTexture" id=15]
+[sub_resource type="StyleBoxTexture" id=16]
 texture = ExtResource( 23 )
 region_rect = Rect2( 0, 0, 224, 64 )
 
-[sub_resource type="StyleBoxTexture" id=16]
+[sub_resource type="StyleBoxTexture" id=17]
 texture = ExtResource( 22 )
 region_rect = Rect2( 0, 0, 224, 64 )
 
-[sub_resource type="StyleBoxTexture" id=17]
+[sub_resource type="StyleBoxTexture" id=18]
 texture = ExtResource( 21 )
 region_rect = Rect2( 0, 0, 224, 64 )
 
@@ -202,12 +202,12 @@ __meta__ = {
 position = Vector2( 180.909, 200.045 )
 scale = Vector2( 15, 5 )
 z_index = 5
-shape = SubResource( 18 )
+shape = SubResource( 14 )
 visibility_mode = 1
 
 [node name="press_start" type="AnimatedSprite" parent="Instrucciones"]
 position = Vector2( 322.996, 255.46 )
-frames = SubResource( 14 )
+frames = SubResource( 15 )
 animation = "parpadeo"
 playing = true
 
@@ -216,9 +216,9 @@ margin_left = -449.258
 margin_top = -293.632
 margin_right = -299.258
 margin_bottom = -243.632
-custom_styles/hover = SubResource( 15 )
-custom_styles/pressed = SubResource( 16 )
-custom_styles/normal = SubResource( 17 )
+custom_styles/hover = SubResource( 16 )
+custom_styles/pressed = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

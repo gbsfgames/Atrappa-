@@ -21,6 +21,9 @@ onready var tiempos1 = [0.5,0.5,0.7,1]
 onready var tiempos2 = [0.5,0.5,0.5,0.7]
 onready var tiempos3 = [0.1,0.3,0.3,0.5]
 onready var tiempos
+onready var tweencito = Tween.new()
+onready var tema = load("res://Popup_numbers.tres")
+
 func _ready():
 	#LLAMO A INICIAR UN NUEVO JUEGO
 	nuevo_juego() # SE LLAMA A LA FUNCION
@@ -37,7 +40,7 @@ func _physics_process(delta):
 		tiempos = tiempos3
 		$Control/label_nivel.text = "Nivel 3"
 		
-	if int($Control/Label.text) ==100 and $KinematicBody2D :
+	if int($Control/Label.text) == 100 and $KinematicBody2D :
 		$KinematicBody2D.queue_free() # se elimina el jugador
 		$Timer2.stop() # SE INICIA EL SEGUNDO TIMER DE  OBJETOS
 		$Fondo.stop() # SE DETIENE EL SOUNDTRACK
@@ -49,7 +52,8 @@ func inicio_juego():
 	var nuevopj = pj.instance() # SE INSTANCIA AL JUGADOR NUEVO
 	self.add_child(nuevopj) # SE AGREGA A LA ESCENA AL JUGADOR INSTANCIADO
 	nuevopj.position = $PJ_position.position # SE LE ASIGNA POSICION
-
+	self.add_child(tweencito)
+	tweencito.connect("tween_completed",self,"letters_deleter")
 # ----------ELECCION DE OBJETOS ALEATORIOS -------------
 func salida_aleat():
 	var objeto = [vaso, sarten, pera, platano, uva, mango, manzana]
@@ -76,12 +80,6 @@ func salida_aleat():
 	nuevo_obj = objeto_random.instance() # NOTA QUE EL OBJETO QUE INSTANCIO LO OBTENGO ALEATORIAMENTE
 	self.add_child(nuevo_obj) #  AÑADO EL NUEVO OBJETO INSCTANCIADO A LA ESCENA
 	nuevo_obj.position = posicion_random # OBJETO A POSICION ALEATORIA DE SALIDA
-	
-func _on_Timer_timeout():
-	#salida_aleat() # SE LLAMA A FUNCION QUE INICIA LANZAMIENTO DE OBJETOS
-	#var tiempos = [1,3,5,7,9] # TIEMPO QUE SE ASIGNA AL TIMER
-	#var nuevo_time = randi() % 5
-	pass
 	
 func _on_Timer2_timeout():
 	salida_aleat() # SE LLAMA A FUNCION QUE INICIA LANZAMIENTO DE OBJETOS
@@ -111,17 +109,43 @@ func juego_terminado():
 	$CanvasLayer/TouchCOntrols.visible = false
 
 func _on_Aplastador_Frutas_area_entered(area):
-		if area.name != "colision_futas" and area.name!="AreaMovimiento":
-			area.queue_free()
-			var exploit_fruit = explosion_fruta.instance() # NOTA QUE EL OBJETO QUE INSTANCIO LO OBTENGO ALEATORIAMENTE
-			#self.add_child(exploit_fruit) #  AÑADO EL NUEVO OBJETO INSCTANCIADO A LA ESCENA
-			if "Sarten" in area.name or "Vaso" in area.name:
-				exploit_fruit.tipo = "explotar_enem"
-				exploit_fruit.scale = Vector2(0.3,0.3)
-			else:
-				exploit_fruit.tipo = "explotar"
-				exploit_fruit.scale = Vector2(0.15,0.15)
-				
-			exploit_fruit.position = area.position # la explosion de ve en la posicion de choque...
-			self.add_child(exploit_fruit)
+	if area.name != "colision_futas" and area.name!="AreaMovimiento":
+		area.queue_free()
+		var exploit_fruit = explosion_fruta.instance() # NOTA QUE EL OBJETO QUE INSTANCIO LO OBTENGO ALEATORIAMENTE
+		#self.add_child(exploit_fruit) #  AÑADO EL NUEVO OBJETO INSCTANCIADO A LA ESCENA
+		if "Sarten" in area.name or "Vaso" in area.name:
+			exploit_fruit.tipo = "explotar_enem"
+			exploit_fruit.scale = Vector2(0.3,0.3)
+		else:
+			exploit_fruit.tipo = "explotar"
+			exploit_fruit.scale = Vector2(0.15,0.15)
+			
+		exploit_fruit.position = area.position # la explosion de ve en la posicion de choque...
+		self.add_child(exploit_fruit)
 
+func animate_labels(position,type):
+	print("Aqui estoy")
+#Se agrega el indicador de daño com texto
+	var text = Label.new()
+	self.add_child(text)
+	text.rect_global_position = position
+	if type=="point":
+		text.text = "+1"
+		#text.self_modulate = Color(0,255,0,1)
+		text.theme = tema 
+		tweencito.interpolate_property(text,"modulate",Color(0,255,0,1),Color(0,255,0,0),1,Tween.TRANS_BOUNCE,Tween.EASE_IN)
+	elif type == "bad":
+		text.text = "-VIDA"
+		#text.self_modulate = Color(255,0,0,1)
+		text.theme = tema 
+		tweencito.interpolate_property(text,"modulate",Color(255,0,0,1),Color(255,0,0,0),1,Tween.TRANS_BOUNCE,Tween.EASE_IN)
+
+#efecto de desaparicion
+	tweencito.start()
+
+func letters_deleter(label,prop):
+	print("objeto %s , key %s" % [label,prop])
+	var key1 = prop
+	label.queue_free()
+	
+	

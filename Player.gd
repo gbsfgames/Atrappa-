@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
 #----- SENALES -----------
+signal points_recolected
 
 #----- TECLAS DEL JUEGO----------
 var velocidad = Vector2(0,0)
@@ -24,6 +25,10 @@ onready var HUDvidas = $"../Control/Sprite/vidas"
 onready var vidas = HUDvidas.text
 onready var mirando = "right"
 
+
+func _ready():
+	self.connect("points_recolected",self.get_parent(),"animate_labels")
+	pass
 #------MOVEMENT
 func _physics_process(delta):
 	velocidad.y += gravedad * delta
@@ -150,11 +155,15 @@ func _on_colision_futas_area_entered(area):
 	if area.name == "AreaMovimiento":
 		self.velocidad.x = 3.5
 	if area.name != "AreaMovimiento" and area.name !="Aplastador_Frutas" and area.name!="colision_gancho":
+		if !area.is_in_group("vaso") and !area.is_in_group("sarten"):
+			self.emit_signal("points_recolected",area.global_position,"point")
 		area.queue_free() # SE ELIMINA EL OBJETO
+		#self.emit_signal("points_recolected",area.global_position)
 		#self.get_tree().get_nodes_in_group("main")[0].salida_aleat() # SE EJECUTA LA FUNCION SALIDA ALEATORIA
 
 	# ---- CONDICIONALES DE PUNTAJE ESPECIFICO POR FRUTA
 	if area.is_in_group("vaso") or area.is_in_group("sarten"):
+		self.emit_signal("points_recolected",area.global_position,"bad")
 		vidas = int(vidas)
 		vidas -=1
 		HUDvidas.text = str(vidas)
@@ -227,6 +236,9 @@ func _on_gancho_animation_finished():
 
 func _on_colision_gancho_area_entered(area):
 	if area.name != "AreaMovimiento" and area.name !="Aplastador_Frutas" and area.name != "colision_futas":
+		if !area.is_in_group("vaso") and !area.is_in_group("sarten"):
+			print(area.name)
+			self.emit_signal("points_recolected",area.global_position,"point")
 		area.queue_free()
 	# ---- CONDICIONALES DE PUNTAJE ESPECIFICO POR FRUTA
 	if area.is_in_group("pera"):

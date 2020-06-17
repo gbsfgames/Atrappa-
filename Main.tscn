@@ -66,15 +66,15 @@ animations = [ {
 "speed": 4.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=13]
+[sub_resource type="RectangleShape2D" id=9]
 
-[sub_resource type="InputEventKey" id=9]
+[sub_resource type="InputEventKey" id=10]
 scancode = 16777221
 
-[sub_resource type="ShortCut" id=10]
-shortcut = SubResource( 9 )
+[sub_resource type="ShortCut" id=11]
+shortcut = SubResource( 10 )
 
-[sub_resource type="SpriteFrames" id=11]
+[sub_resource type="SpriteFrames" id=12]
 animations = [ {
 "frames": [ ExtResource( 25 ), ExtResource( 27 ), ExtResource( 26 ) ],
 "loop": true,
@@ -82,7 +82,7 @@ animations = [ {
 "speed": 4.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=12]
+[sub_resource type="RectangleShape2D" id=13]
 
 [node name="Main" type="Node" groups=[
 "main",
@@ -186,7 +186,7 @@ position = Vector2( 67.2687, 551.703 )
 z_index = 2
 frames = SubResource( 5 )
 animation = "animacion"
-frame = 11
+frame = 6
 playing = true
 
 [node name="game_overR" type="Node2D" parent="."]
@@ -214,14 +214,13 @@ position = Vector2( -289.266, 261.717 )
 z_index = 4
 frames = SubResource( 8 )
 animation = "press"
-frame = 2
 playing = true
 
 [node name="continue_over" type="TouchScreenButton" parent="game_overR"]
 position = Vector2( -436.485, 184.132 )
 scale = Vector2( 15, 8 )
 z_index = 3
-shape = SubResource( 13 )
+shape = SubResource( 9 )
 
 [node name="winner" type="Node2D" parent="."]
 visible = false
@@ -235,7 +234,7 @@ texture = ExtResource( 22 )
 [node name="win" type="Button" parent="winner"]
 margin_right = 12.0
 margin_bottom = 20.0
-shortcut = SubResource( 10 )
+shortcut = SubResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -243,16 +242,16 @@ __meta__ = {
 [node name="press_startW" type="AnimatedSprite" parent="winner"]
 position = Vector2( 821.902, 666.316 )
 z_index = 4
-frames = SubResource( 11 )
+frames = SubResource( 12 )
 animation = "pressW"
-frame = 1
+frame = 2
 playing = true
 
 [node name="continue_win" type="TouchScreenButton" parent="winner"]
 position = Vector2( 670.987, 579.898 )
 scale = Vector2( 15, 8 )
 z_index = 3
-shape = SubResource( 12 )
+shape = SubResource( 13 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -285,12 +284,19 @@ action = "jump"
 visibility_mode = 1
 
 [node name="gancho" type="TouchScreenButton" parent="CanvasLayer/TouchCOntrols"]
-position = Vector2( 852.513, 436.335 )
+position = Vector2( 887.42, 445.855 )
 scale = Vector2( 0.47325, 0.47325 )
 normal = ExtResource( 31 )
 pressed = ExtResource( 30 )
 action = "attack"
 visibility_mode = 1
+
+[node name="Label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="sin_vidas" from="Control" to="." method="juego_terminado"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
