@@ -209,6 +209,7 @@ visibility_mode = 1
 position = Vector2( 322.996, 255.46 )
 frames = SubResource( 15 )
 animation = "parpadeo"
+frame = 1
 playing = true
 
 [node name="back_to_inicio" type="Button" parent="Instrucciones"]
